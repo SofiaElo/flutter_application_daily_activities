@@ -1,6 +1,13 @@
 Your Daily Life
 ===============
 
+Practicalities
+--------------
+- This project is for learning Flutter and Dart.
+- Lib folder contains the code for frontend graphics and functionalities.
+- Pictures of the current state of the Application can be viewed in the folder PicsOfApp.
+
+
 About the application
 ---------------------
 
@@ -10,10 +17,8 @@ the accuracy of an hour. Tracking food and water can be tracked in cal and dl. O
 The application has a frontpage with title and info of the application. There is a button to form page where one can input data for the application and its statistics.
 The statistics are shown on results page.
 
-Link to the application
+[Link to the application when deployed online] 
 -----------------------
-
-
 
 TODO:
 - add breakpoints;
