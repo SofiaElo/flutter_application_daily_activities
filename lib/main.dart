@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'pages/home_screen.dart';
 import 'controllers/activities_controller.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
+import 'controllers/goals_controller.dart';
 
 class Breakpoints {
 static const sm = 640;
@@ -24,6 +25,7 @@ Future<void> main() async {
 
   Get.lazyPut<ActivitiesController>(() => ActivitiesController());
   Get.lazyPut<DrinksController>(() => DrinksController());
+  Get.lazyPut<GoalsController>(() => GoalsController());
 
   runApp(MyApp(theme: theme));
 }

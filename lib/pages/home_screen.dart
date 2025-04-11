@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'form_screen.dart';
+import 'goals_screen.dart';
+import '../widgets/nav.dart';
 
 class HomeScreen extends StatelessWidget {
 @override
@@ -10,12 +12,7 @@ Widget build(BuildContext context) {
   body: ListView(
       padding: EdgeInsets.all(24.0),
       children: [
-        Center(child: Text(
-          "Your Day in Numbers",
-          style: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold, 
-          color: Color.fromRGBO(186,1,200,1)),
-          ),
-        ),
+        Navigation(),
         SizedBox(height: 24.0),
         Center(
             child:
@@ -29,6 +26,13 @@ Widget build(BuildContext context) {
           child: ElevatedButton(
             onPressed: () => Get.to(() => FormScreen()),
             child: Text('Add To Tracker'),
+          ),
+          ),
+        SizedBox(height: 24.0),
+        Center(
+          child: ElevatedButton(
+            onPressed: () => Get.to(() => GoalScreen()),
+            child: Text('Add To Goals'),
           ),
           ),
       ],

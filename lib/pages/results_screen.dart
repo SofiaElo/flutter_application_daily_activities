@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../widgets/results_screen/nav_results_screen.dart';
 import '../widgets/results_screen/activities_part_results_screen.dart';
 import '../widgets/results_screen/drinks_part_results_screen.dart';
+import '../widgets/nav.dart';
+import '../widgets/results_screen/goals.dart';
 
 class Breakpoints {
   static const sm = 640;
@@ -16,9 +17,10 @@ Widget build(BuildContext context) {
   final size = MediaQuery.of(context).size;
   return Scaffold(
     body: ListView(
+      padding: EdgeInsets.all(24.0),
       children: [
         SizedBox(height: 16.0),
-        NavResultScreen(),
+        Navigation(),
         SizedBox(height: 16.0),
         Expanded(child: 
           Center(child: size.width < Breakpoints.sm
@@ -32,6 +34,7 @@ Widget build(BuildContext context) {
             ],),
           ),
         ),
+        GoalsResultScreen(),
       ],
     )
   );

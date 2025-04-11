@@ -19,4 +19,12 @@ The statistics are shown on results page.
 [Link to the application when deployed online] 
 -----------------------
 
+Contents of src/lib folder
+--------------------------
+- The main.dart contains the application.
+- The pages folder contains the different screens which use the components from widgets folder. 
+- The Widgets folder contains different components and they are divided to form_screen and results_screen folders. 
+- The models contain the objects used in the application.
+- The Controllers folder contains the controllers handling the logic of the application.
+
     

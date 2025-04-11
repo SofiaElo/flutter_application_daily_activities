@@ -3,10 +3,12 @@ import 'package:get/get.dart';
 
 import '../../pages/home_screen.dart';
 import '../../pages/results_screen.dart';
+import '../../pages/goals_screen.dart';
+import '../pages/form_screen.dart';
 
 
 
-class NavFormScreen extends StatelessWidget {
+class Navigation extends StatelessWidget {
 
   @override
 Widget build(BuildContext context) {
@@ -20,6 +22,21 @@ Widget build(BuildContext context) {
             onPressed: () {
               Get.to(() => HomeScreen());
             }),
+          IconButton(
+            icon: Icon(Icons.add_task_rounded),
+            onPressed: () {
+              Get.to(() => GoalScreen());
+            }),
+          IconButton(
+            icon: Icon(Icons.add_chart_rounded),
+            onPressed: () {
+              Get.to(() => FormScreen());
+            }),
+          IconButton(
+            icon: Icon(Icons.bar_chart_rounded),
+            onPressed: () {
+              Get.to(() => ResultsScreen());
+            }),
           Expanded(child: Center(
             child: Text(
               "Your Day in Numbers",
@@ -28,11 +45,7 @@ Widget build(BuildContext context) {
               ),
             ),
           ),
-          IconButton(
-            icon: Icon(Icons.arrow_forward_ios_outlined),
-            onPressed: () {
-              Get.to(() => ResultsScreen());
-            }),
+          
         ],),
         SizedBox(height: 24.0),
       ],

@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 import '../widgets/form_screen/drinks_part_form_screen.dart';
 import '../widgets/form_screen/activities_part_form_screen.dart';
-import '../widgets/form_screen/nav_form_screen.dart';
+import '../widgets/nav.dart';
 
 
 class Breakpoints {
@@ -21,7 +21,7 @@ Widget build(BuildContext context) {
     body: ListView(
       padding: EdgeInsets.all(24.0),
       children: [
-        NavFormScreen(),
+        Navigation(),
            size.width < Breakpoints.sm
             ? Column(
               crossAxisAlignment: CrossAxisAlignment.start,
