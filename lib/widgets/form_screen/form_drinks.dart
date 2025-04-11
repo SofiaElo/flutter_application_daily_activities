@@ -5,8 +5,8 @@ import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:get/get.dart';
 
 
-import '../controllers/drinks_controller.dart';
-import '../models/drinks.dart';
+import '../../controllers/drinks_controller.dart';
+import '../../models/drinks.dart';
 
 class FormDrinks extends StatelessWidget {
 final drinksController = Get.find<DrinksController>();

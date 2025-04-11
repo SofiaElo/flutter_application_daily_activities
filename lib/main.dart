@@ -29,6 +29,7 @@ Future<void> main() async {
 }
 
 class MyApp extends StatelessWidget {
+  static const double maxContentWidth = 1000;
   final ThemeData theme;
 
   MyApp({required this.theme});
@@ -37,6 +38,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       theme: theme,
+      builder: (context, child) {
+        return Center(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(maxWidth: maxContentWidth),
+            child: child!,
+          ),
+        );
+      },
       home: HomeScreen());
   }
 }

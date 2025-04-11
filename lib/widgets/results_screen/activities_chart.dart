@@ -4,18 +4,18 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 
 
 
-import '../controllers/drinks_controller.dart';
+import '../../controllers/activities_controller.dart';
 
-class DrinksChart extends StatelessWidget {
-  final drinksController = Get.find<DrinksController>();
+class ActivitiesChart extends StatelessWidget {
+  final activitiesController = Get.find<ActivitiesController>();
 
   // Helper function to make the list for activities as ChartData for the donut chart
-  arrayForDrinks() {
+  arrayForActivities() {
     List<ChartData> chartData = [];
-    List colors = [Color.fromRGBO(1, 137, 200, 1), Color.fromRGBO(1, 81, 200, 1), Color.fromRGBO(8, 1, 200, 1)];
+    List colors = [Color.fromRGBO(186,1,200,1), Color.fromRGBO(1, 137, 200, 1),Color.fromRGBO(1, 200, 134, 1), Color.fromRGBO(8, 1, 200, 1)];
     int colorNum = 0;
-    for (final drink in drinksController.drinks) {
-      chartData.add(ChartData(drink.name, drink.amount, "${drink.amount}dl ${drink.name}", colors[colorNum]));
+    for (final activity in activitiesController.activities) {
+      chartData.add(ChartData(activity.name, activity.time, "${activity.time}h ${activity.name}", colors[colorNum]));
       colorNum += 1;
       //Check that colors are not gonna go out of index
       if (colorNum == colors.length) {
@@ -34,7 +34,7 @@ Widget build(BuildContext context) {
                     series: <CircularSeries>[
                         // Renders doughnut chart
                         DoughnutSeries<ChartData, String>(
-                            dataSource: arrayForDrinks(),
+                            dataSource: arrayForActivities(),
                             pointColorMapper:(ChartData data,  _) => data.color,
                             //pointColorMapper: (ChartSampleData data, _) => data.pointColor,
                             xValueMapper: (ChartData data, _) => data.x,
@@ -46,23 +46,8 @@ Widget build(BuildContext context) {
                                     labelPosition: ChartDataLabelPosition.outside
                                 ),
                         
-                        ),
-                    ],
-                    annotations: <CircularChartAnnotation>[
-                          CircularChartAnnotation(
-                            widget: Center(
-                              child: Obx(() => Text(
-                                'Total: ${drinksController.wholeAmount()} l',   // Your custom text
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: Color.fromRGBO(186,1,200,1),
-                                ),
-                              ),
-                              ),
-                            ),
-                            // This annotation will be centered
-                          )
-                        ],
+                        )
+                    ]
                 )
             );
     }

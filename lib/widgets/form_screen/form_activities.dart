@@ -4,8 +4,8 @@ import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:get/get.dart';
 
 
-import '../controllers/activities_controller.dart';
-import '../models/activity.dart';
+import '../../controllers/activities_controller.dart';
+import '../../models/activity.dart';
 
 class FormActivities extends StatelessWidget {
 final activitiesController = Get.find<ActivitiesController>();

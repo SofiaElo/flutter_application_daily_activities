@@ -20,7 +20,7 @@ Widget build(BuildContext context) {
         Center(
             child:
               Text(
-                "This is an application where one can daily activities and the times they have taken. User can insert the amount of sleep, studying, sports and others as time spent with the accuracy of an hour. Tracking food and water can be tracked in cal and dl. Overall mood can also be tracked.",
+                "This is an application where one can daily activities and the times they have taken. User can insert the amount of sleep, studying, sports and others as time spent with the accuracy of an 0.5 hour. Tracking drinks can be done in dl.",
                 style: TextStyle(color: Color.fromRGBO(186,1,200,1), ),
               ),
         ),

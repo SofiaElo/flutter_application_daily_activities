@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 
-import '../controllers/activities_controller.dart';
+import '../../controllers/drinks_controller.dart';
 
-class ActivitiesList extends StatelessWidget {
-  final activitiesController = Get.find<ActivitiesController>();
+class DrinksList extends StatelessWidget {
+  final drinksController = Get.find<DrinksController>();
 
   @override
 Widget build(BuildContext context) {
   return Obx(
-    () => activitiesController.size == 0
-        ? Text('No Activities')
+    () => drinksController.size == 0
+        ? Text('No Drinks')
         : Column(
-            children: activitiesController.activities
+            children: drinksController.drinks
                 .map(
-                  (activity) => Column(children: [
+                  (drink) => Column(children: [
                     ListTile(
                     minVerticalPadding: 2,
                     leading: Row(
@@ -24,25 +24,25 @@ Widget build(BuildContext context) {
                       IconButton(
                       icon: Icon(Icons.add),
                       onPressed: () {
-                        activitiesController.increaseDuration(activity);
+                        drinksController.increaseAmount(drink);
                       }),
                       IconButton(
                       icon: Icon(Icons.remove),
                       onPressed: () {
-                        activitiesController.decreaseDuration(activity);
+                        drinksController.decreaseAmount(drink);
                       }),
                     ],
                     ),
                     
                     title: Center(child: Text(
-                      activity.name, 
+                      drink.name, 
                       style: TextStyle(fontSize: 18.0))),
-                    subtitle: Center(child: Text("${activity.time}",
+                    subtitle: Center(child: Text("${drink.amount}",
                     style: TextStyle(fontSize: 18.0),)),
                     trailing: IconButton(
                       icon: Icon(Icons.delete),
                       onPressed: () {
-                        activitiesController.delete(activity);
+                        drinksController.delete(drink);
                       },
                     ),
                     tileColor: Colors.purple[100],
