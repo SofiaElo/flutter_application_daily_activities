@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
 
 import '../widgets/form_screen/drinks_part_form_screen.dart';
 import '../widgets/form_screen/activities_part_form_screen.dart';

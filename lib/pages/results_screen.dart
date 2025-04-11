@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../widgets/results_screen/activities_part_results_screen.dart';
 import '../widgets/results_screen/drinks_part_results_screen.dart';
