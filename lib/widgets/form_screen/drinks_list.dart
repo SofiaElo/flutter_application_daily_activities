@@ -21,15 +21,16 @@ Widget build(BuildContext context) {
                     leading: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                      IconButton(
-                      icon: Icon(Icons.add),
-                      onPressed: () {
-                        drinksController.increaseAmount(drink);
-                      }),
+                      
                       IconButton(
                       icon: Icon(Icons.remove),
                       onPressed: () {
                         drinksController.decreaseAmount(drink);
+                      }),
+                      IconButton(
+                      icon: Icon(Icons.add),
+                      onPressed: () {
+                        drinksController.increaseAmount(drink);
                       }),
                     ],
                     ),

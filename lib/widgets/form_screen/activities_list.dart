@@ -22,14 +22,14 @@ Widget build(BuildContext context) {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                       IconButton(
-                      icon: Icon(Icons.add),
-                      onPressed: () {
-                        activitiesController.increaseDuration(activity);
-                      }),
-                      IconButton(
                       icon: Icon(Icons.remove),
                       onPressed: () {
                         activitiesController.decreaseDuration(activity);
+                      }),
+                      IconButton(
+                      icon: Icon(Icons.add),
+                      onPressed: () {
+                        activitiesController.increaseDuration(activity);
                       }),
                     ],
                     ),

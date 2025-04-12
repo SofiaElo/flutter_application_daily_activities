@@ -22,14 +22,14 @@ Widget build(BuildContext context) {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                       IconButton(
-                      icon: Icon(Icons.add),
-                      onPressed: () {
-                        goalsController.increaseAmount(goal);
-                      }),
-                      IconButton(
                       icon: Icon(Icons.remove),
                       onPressed: () {
                         goalsController.decreaseAmount(goal);
+                      }),
+                      IconButton(
+                      icon: Icon(Icons.add),
+                      onPressed: () {
+                        goalsController.increaseAmount(goal);
                       }),
                     ],
                     ),
