@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../pages/home_screen.dart';
-import '../../pages/results_screen.dart';
-import '../../pages/goals_screen.dart';
+import '../pages/home_screen.dart';
+import '../pages/results_screen.dart';
+import '../pages/goals_screen.dart';
 import '../pages/form_screen.dart';
 
 

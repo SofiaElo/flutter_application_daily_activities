@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/controllers/drinks_controller.dart';
+import 'controllers/drinks_controller.dart';
 import 'package:get/get.dart';
 
 import 'pages/home_screen.dart';
+import 'pages/mood_screen.dart';
 import 'controllers/activities_controller.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'controllers/goals_controller.dart';
@@ -48,7 +49,13 @@ class MyApp extends StatelessWidget {
           ),
         );
       },
-      home: HomeScreen());
+      initialRoute: '/',
+    getPages: [
+      GetPage(name: '/', page: () => HomeScreen()),
+      GetPage(name: '/mood/:id', page: () => MoodScreen()),
+      // Add more routes as needed
+    ], 
+    );
   }
 }
 

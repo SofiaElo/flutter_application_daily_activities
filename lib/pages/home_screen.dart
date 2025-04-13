@@ -17,8 +17,8 @@ Widget build(BuildContext context) {
         Center(
             child:
               Text(
-                "This is an application where one can daily activities and the times they have taken. User can insert the amount of sleep, studying, sports and others as time spent with the accuracy of an 0.5 hour. Tracking drinks can be done in dl.",
-                style: TextStyle(color: Color.fromRGBO(186,1,200,1), ),
+                "This is an application where one can track daily activities and the times they have taken. User can insert the amount of sleep, studying, sports and others as time spent with the accuracy of an 0.5 hour. Tracking drinks can be done in dl.",
+                style: TextStyle(color: Color.fromRGBO(186,1,200,1)),
               ),
         ),
         SizedBox(height: 24.0),
@@ -35,6 +35,22 @@ Widget build(BuildContext context) {
             child: Text('Add To Goals'),
           ),
           ),
+          SizedBox(height: 48),
+        Center(
+          child: Column(children: [
+            Text("What is your current mood?",
+            style: TextStyle(color: Color.fromRGBO(186,1,200,1), fontSize: 18),),
+            SizedBox(height: 24.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(onPressed: () => Get.toNamed('/mood/sad'), style: ElevatedButton.styleFrom(backgroundColor: Colors.redAccent), child: Icon(Icons.mood_bad_rounded)),
+                SizedBox(width: 24),
+                ElevatedButton(onPressed: () => Get.toNamed('/mood/happy'), style: ElevatedButton.styleFrom(backgroundColor: Colors.greenAccent), child: Icon(Icons.mood_rounded)),
+            ],),
+          ],
+          ),
+        ),
       ],
     ),
   );
